@@ -71,7 +71,7 @@
             }
 
             &:first-child {
-                &::after {
+                &:after {
                     content: 'HOME';
                 }
             }
