@@ -25,10 +25,9 @@ const About = () => {
           />
         </h1>
         <p>
-          I am a skilled web developer and graphic designer with a charismatic
-          personality who aspires to work as a Web Developer in a competitive
-          and technical setting. In the long run, I want to be an ambitious
-          entrepreneur who creates exciting new IT opportunities.
+          Hi, I am <b>Software Engineer</b> in <b>Quickbill Software Solutions Pvt. Ltd</b>. Here I am working on C#, .Net, 
+          Node.js and Sql for product development. Also I am working on APIs using Node 
+          and Express for Implementation in software.
         </p>
         <p>
           I am a skilled web developer and graphic designer with a charismatic
