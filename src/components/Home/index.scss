@@ -8,6 +8,7 @@
         width: 40%;
         max-height: 90%;
     }
+
     h1 {
         color: #fff;
         font-size: 53px;
@@ -106,5 +107,11 @@
             border: 1px solid #fff;
             transform: scaleX(1.2) scaleY(1.2) translateX(10px);
         }
+    }
+}
+
+@media (min-width: 576px) {
+    .home-page {
+        flex: 1;
     }
 }

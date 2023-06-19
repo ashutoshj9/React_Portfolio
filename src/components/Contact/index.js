@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
@@ -9,25 +9,40 @@ const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const refForm = useRef()
 
+  //#region LETTER ANIMATION
+  const Letter_Animate = () => {
+    return setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 4000)
+  }
+
+  useEffect(() => {
+    Letter_Animate()
+  }, [])
+  //#endregion
+
+  //#region SEND EMAIL
   const sendEmail = (e) => {
     e.preventDefault()
 
-    emailjs.sendForm(
-      'service_kkwa2wc',
-      'template_2tpapig',
-      refForm.current,
-      '6womwaufSmKJORheH'
-    )
-    .then(
+    emailjs
+      .sendForm(
+        'service_kkwa2wc',
+        'template_2tpapig',
+        refForm.current,
+        '6womwaufSmKJORheH'
+      )
+      .then(
         () => {
-            alert('Message Successfully Sent!')
-            window.location.reload(false)
+          alert('Message Successfully Sent!')
+          window.location.reload(false)
         },
         () => {
-            alert('Failed to send the message, please try again')
+          alert('Failed to send the message, please try again')
         }
-    )
+      )
   }
+  //#endregion
 
   return (
     <>
@@ -45,13 +60,20 @@ const Contact = () => {
             <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Name"
+                    required
+                  />
                 </li>
                 <li className="half">
                   <input
                     type="email"
-                    name="email"
+                    name="from_email"
                     placeholder="Email"
+                    id="email"
                     required
                   />
                 </li>
@@ -60,6 +82,7 @@ const Contact = () => {
                     type="text"
                     name="subject"
                     placeholder="Subject"
+                    id="subject"
                     required
                   />
                 </li>
@@ -68,6 +91,8 @@ const Contact = () => {
                     placeholder="Message"
                     name="message"
                     required
+                    style={{ color: '#000' }}
+                    id="message"
                   ></textarea>
                 </li>
                 <li>
@@ -77,22 +102,24 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className='info-map'>
-            Ashutosh Jha,
-            <br />
-            India,
-            <br />
-            Bommanahali, Bengaluru<br/>
-            Karnataka<br/>
-            <span>ashutosh199900@gmail.com</span>
+        <div className="info-map">
+          Ashutosh Jha,
+          <br />
+          India,
+          <br />
+          Sector 6, HSR Layout,
+          <br />
+          Bengaluru, Karnataka
+          <br />
+          <span>ashutosh199900@gmail.com</span>
         </div>
-        <div className='map-wrap'>
-            <MapContainer center={[12.8892982, 77.6192335]} zoom={13}>
-                <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
-                <Marker position={[12.8892982, 77.6192335]}>
-                    <Popup>Ashutosh Here</Popup>
-                </Marker>
-            </MapContainer>
+        <div className="map-wrap">
+          <MapContainer center={[12.9144668, 77.632632]} zoom={16}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[12.9144668, 77.632632]}>
+              <Popup>I am here</Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
       <Loader type="pacman" />

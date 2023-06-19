@@ -1,0 +1,42 @@
+.work-page {
+
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        max-height: 90%;
+        font-family: 'Coolvetica';
+        font-size: 1.5rem;
+        letter-spacing: 0.1cm;
+    }
+
+    .projects-zone {
+        border: 0.1rem solid #000;
+        border-radius: 10px;
+        width: 40vh;
+        height: 25vh;
+        display: inline-flex;
+        margin-right: 10px;
+        padding-inline: 8px;
+
+        p {
+            font-family: 'Helvetica';
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 0.1cm;
+            flex: auto;
+            text-align: center;
+            align-self: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        p:hover {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+}
