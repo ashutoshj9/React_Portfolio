@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.scss'
+import AnimatedLetters from '../AnimatedLetters'
 
 const Work = () => {
+  const [letterClass, setLetterClass] = useState('text-animate')
+  const workTitle = ['P', 'R', 'O', 'J', 'E', 'C', 'T', 'S']
   const projectList = [
     {
       id: 1,
@@ -19,11 +22,24 @@ const Work = () => {
     },
     {
       id: 3,
-      name: 'In Progress',
-      source: '',
-      image: '',
+      name: 'PORTFOLIO',
+      source: 'https://ashutoshj9.github.io/Portfolio/',
+      image:
+        'https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/08/how-to-make-an-online-portfolio.png',
     },
   ]
+
+  //#region LETTER ANIMATION
+  const Letter_Animate = () => {
+    return setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 4000)
+  }
+
+  useEffect(() => {
+    Letter_Animate()
+  }, [])
+  //#endregion
 
   const showProject = () => {
     const projects = projectList.map((item) => (
@@ -49,7 +65,13 @@ const Work = () => {
     <>
       <div className="container work-page">
         <div className="text-zone">
-          <h1>PROJECTS</h1>
+          <h1>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={workTitle}
+              idx={8}
+            />
+          </h1>
           {showProject()}
         </div>
       </div>
