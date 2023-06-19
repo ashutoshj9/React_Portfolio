@@ -12,9 +12,10 @@ const Work = () => {
     },
     {
       id: 2,
-      name: 'In Progress',
-      source: '',
-      image: '',
+      name: 'WINKIEYE',
+      source: 'https://winkieye.netlify.app/',
+      image:
+        'https://www.mindfiresolutions.com/blog/wp-content/uploads/Ecommerce-App-for-Eyewear-Store.jpg',
     },
     {
       id: 3,
@@ -48,7 +49,7 @@ const Work = () => {
     <>
       <div className="container work-page">
         <div className="text-zone">
-          <h1>DESIGNS</h1>
+          <h1>PROJECTS</h1>
           {showProject()}
         </div>
       </div>
