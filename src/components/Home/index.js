@@ -6,6 +6,8 @@ import AnimatedLetters from '../AnimatedLetters'
 // import Logo from './Logo'
 import Loader from 'react-loaders'
 
+const RESUME_LINK = "https://drive.google.com/file/d/1g-Mhx-RaxOulzlD6CbHWaqWLotsBnmZY/view?usp=sharing";
+
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const nameArray = ['s', 'h', 'u', 't', 'o', 's', 'h']
@@ -74,7 +76,7 @@ const Home = () => {
           <br />
           <div>
             <a
-              href="https://drive.google.com/file/d/1RXuLc0hsaFi6Ygtew3peZytRXK0-4abM/view?usp=sharing"
+              href={RESUME_LINK}
               className="flat-button1"
               target="_blank"
               rel="noreferrer"
