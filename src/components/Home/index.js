@@ -6,7 +6,7 @@ import AnimatedLetters from '../AnimatedLetters'
 // import Logo from './Logo'
 import Loader from 'react-loaders'
 
-const RESUME_LINK = "https://drive.google.com/file/d/1g-Mhx-RaxOulzlD6CbHWaqWLotsBnmZY/view?usp=sharing";
+const RESUME_LINK = "https://drive.google.com/file/d/1l0iq17MRSfcVVDlOmB7iy4cfjdjSgL5H/view?usp=sharing";
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
