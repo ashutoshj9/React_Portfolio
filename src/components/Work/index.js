@@ -8,20 +8,27 @@ const Work = () => {
   const projectList = [
     {
       id: 1,
+      name: 'PASSWORD GENERATOR',
+      source: 'https://password-generator-aj9.netlify.app/',
+      image:
+        'http://surl.li/jkwrr',
+    },
+    {
+      id: 2,
       name: 'KANBAN BOARD',
       source: 'https://kanban-board-ashutosh.netlify.app/',
       image:
         'https://www.techrepublic.com/wp-content/uploads/2022/11/kanban-proofhub-better-trello-tr-770x431.jpeg',
     },
     {
-      id: 2,
+      id: 3,
       name: 'WINKIEYE',
       source: 'https://winkieye.netlify.app/',
       image:
         'https://www.mindfiresolutions.com/blog/wp-content/uploads/Ecommerce-App-for-Eyewear-Store.jpg',
     },
     {
-      id: 3,
+      id: 4,
       name: 'PORTFOLIO',
       source: 'https://ashutoshj9.github.io/Portfolio/',
       image:
@@ -43,7 +50,7 @@ const Work = () => {
 
   const showProject = () => {
     const projects = projectList.map((item) => (
-      <>
+      <div key={item.id} className="project-container">
         <a href={item.source} target="_blank" rel="noreferrer">
           <div
             className="projects-zone"
@@ -54,13 +61,13 @@ const Work = () => {
               backgroundPosition: 'center',
             }}
           >
-            <p>{item.name}</p>
           </div>
+          <p>{item.name}</p>
         </a>
-      </>
-    ))
-    return projects
-  }
+      </div>
+    ));
+    return projects;
+  };
   return (
     <>
       <div className="container work-page">
