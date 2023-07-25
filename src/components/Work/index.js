@@ -4,7 +4,7 @@ import AnimatedLetters from '../AnimatedLetters'
 
 const Work = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const workTitle = ['P', 'R', 'O', 'J', 'E', 'C', 'T', 'S']
+  const workTitle = ['P', 'r', 'o', 'j', 'e', 'c', 't', 's']
   const projectList = [
     {
       id: 1,
