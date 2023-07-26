@@ -11,7 +11,7 @@ const Work = () => {
       name: 'PASSWORD GENERATOR',
       source: 'https://password-generator-aj9.netlify.app/',
       image:
-        'http://surl.li/jkwrr',
+        'https://cdn.pixabay.com/photo/2016/02/16/16/57/login-1203603_1280.png',
     },
     {
       id: 2,
