@@ -40,9 +40,7 @@ const About = () => {
           </h1>
           <p>
             Hi, I am <b>Software Engineer</b> in{' '}
-            <b>Quickbill Software Solutions Pvt. Ltd</b>. Here I am working on
-            React Native, React, Node.js, Express.js, C#, .Net and Sql for
-            product development. Also I am working on API Integration.
+            <b>Ajackus</b>.
           </p>
           <p>
             I am an experienced Mobile App Developer with a charismatic
